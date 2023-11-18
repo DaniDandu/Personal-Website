@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <nav class="navbar navbar-expand-sm navbar-dark">
+    <!-- <nav class="navbar navbar-expand-sm navbar-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">
           <img title="Daniel Dandu" src="img/logo.png" style="width: 70px; height: 45px;">
@@ -62,7 +62,10 @@
         </ul>
       </div>
     </div>
-    </nav>
+    </nav> -->
+
+    <?php include 'menu.php'?>
+    
     <div class="container">
       <div class="row">
         <div class="text col-md-6" style="padding: 2% 0 2% 0;">
@@ -96,7 +99,10 @@
         </div>
       </div>
     </div>
-    <footer class="footer py-3 border-top">
+
+    <?php include 'footer.php'?>
+
+    <!-- <footer class="footer py-3 border-top">
       <div class="row">
         <div class="copy-mobile col-md-6" style="padding-left: 2%;">© 2022 Copyright Daniel Dandu</div>
         <div class="icons-mobile col-md-6">
@@ -111,7 +117,7 @@
           </a>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
