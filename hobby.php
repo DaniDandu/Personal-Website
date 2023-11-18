@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/469dab0359.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <nav class="navbar navbar-expand-sm navbar-dark">
@@ -42,7 +43,7 @@
           </li>
           <li class="nav-item">
             <div class="ro-flag">
-              <a title="Română" class="nav-link" href="contact.html">
+              <a title="Română" class="nav-link" href="hobby.html">
                 <button type="button" class="btn" data-bs-toggle="popover">
                 <img src="img/ro.png" style="height: 20px; width: 20px;">
                 </button>
@@ -52,7 +53,7 @@
           <li class="nav-item"><div class="slash">/</div></li>
           <li class="nav-item">
             <div class="en-flag">
-              <a title="Engleză" class="nav-link" href="contact_en.html">
+              <a title="Engleză" class="nav-link" href="hobby_en.html">
                 <button type="button" class="btn" data-bs-toggle="popover">
                 <img src="img/en.png" style="height: 20px; width: 20px;">
                 </button>
@@ -65,34 +66,30 @@
     </nav>
     <div class="container">
       <div class="row">
-        <div class="text col-md-6" style="padding: 2% 0 2% 0;">
-          <p style="font-size: 20px; font-family:Verdana;">
-            Adresă: Timișoara, România<br>
-            Telefon: 0732619973 <br>
-            Email: daniel.dandu@student.upt.ro <br>
-          </p>
-          <p style="font-size: 16px; font-family:Verdana;">Scanează codul QR pentru datele de contact:</p>
-            <img src="img/qrcode.png">
-          
+        <div class="text col-md-6">
+          <p style="font-size: 20px; font-family:Verdana;"><b>Hobby-uri</b></p><br>
+          <p>Îmi place foarte mult să conduc, mai ales la drum lung. Mi se pare că este 
+            foarte linistitor. Mai îmi place să ascult muzică, să ies cu prietenii. Cel mai mult pot să spun că îmi place
+            condusul, mai ales când ascult și melodiile preferate în mașină.</p>
           
         </div>
-        <div class="col-md-6 text-center" style="padding: 2% 0 2% 0; min-width: none;">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2784.1925476928313!2d21.224111515862404!3d45.747285679105346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47455d8303f55439%3A0xbe8d0248f81cb2a9!2sFacultatea%20de%20Electronic%C4%83%2C%20Telecomunica%C8%9Bii%20%C8%99i%20Tehnologii%20Informa%C8%9Bionale!5e0!3m2!1sro!2sro!4v1671156551262!5m2!1sro!2sro" width="520" height="470" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-        </div>
-      </div>
-      <div class="row">
-        <div class="text col-md-12">
-          <form action="" method="">
-            <label for="prenume">Prenume</label>
-            <input type="text" id="" name="prenume"><br>
-            <label for="nume">Nume</label>
-            <input type="text" name="nume"><br>
-            <label for="email">Email</label>
-            <input type="email" name="email"><br>
-            <label for="telefon">Telefon</label>
-            <input type="number" name="telefon"><br>
-          </form>
+        <div class="col-md-6 text-center ">
+            <div class="containerl">
+                <div class="lightbox-gallery">
+                  <a href="img/condus.jpg">
+                    <img src="img/condus.jpg" class="img-fluid" style="height: 200px; width: 300px;">
+                  </a>
+                  <a href="img/muzica2.jpg">
+                    <img src="img/muzica2.jpg" class="img-fluid" style="height: 200px; width: 300px;">
+                  </a>
+                  <a href="img/muzica1.jpg">
+                    <img src="img/muzica1.jpg" class="img-fluid" style="height: 200px; width: 300px;">
+                  </a>
+                  <a href="img/condus2.jpg">
+                    <img src="img/condus2.jpg" class="img-fluid" style="height: 200px; width: 300px;">
+                  </a>
+                </div>
+            </div>
         </div>
       </div>
     </div>
@@ -115,5 +112,8 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js" integrity="sha512-C1zvdb9R55RAkl6xCLTPt+Wmcz6s+ccOvcr6G57lbm8M2fbgn2SUjUJbQ13fEyjuLViwe97uJvwa1EUf4F1Akw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/javascript.js" type="text/javascript"></script>
   </body>
 </html>

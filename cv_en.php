@@ -12,7 +12,7 @@
   <body>
     <nav class="navbar navbar-expand-sm navbar-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index_en.html">
           <img title="Daniel Dandu" src="img/logo.png" style="width: 70px; height: 45px;">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -21,28 +21,28 @@
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
           <li class="nav-item text-center">
-            <a class="nav-link active" href="index.html">
+            <a class="nav-link" href="index_en.html">
               <button type="button" class="btn" data-bs-toggle="popover">Home</button>
             </a>
           </li>
           <li class="nav-item text-center">
-            <a class="nav-link" href="cv.html">
+            <a class="nav-link active" href="cv_en.html">
               <button type="button" class="btn" data-bs-toggle="popover">CV</button>
             </a>
           </li>
           <li class="nav-item text-center">
-            <a class="nav-link" href="hobby.html">
+            <a class="nav-link" href="hobby_en.html">
               <button type="button" class="btn" data-bs-toggle="popover">Hobby</button>
             </a>
           </li>
           <li class="nav-item text-center">
-            <a class="nav-link" href="contact.html">
+            <a class="nav-link" href="contact_en.html">
               <button type="button" class="btn" data-bs-toggle="popover">Contact</button>
             </a>
           </li>
           <li class="nav-item">
             <div class="ro-flag">
-              <a title="Română" class="nav-link" href="contact.html">
+              <a title="Romanian" class="nav-link" href="cv.html">
                 <button type="button" class="btn" data-bs-toggle="popover">
                 <img src="img/ro.png" style="height: 20px; width: 20px;">
                 </button>
@@ -52,7 +52,7 @@
           <li class="nav-item"><div class="slash">/</div></li>
           <li class="nav-item">
             <div class="en-flag">
-              <a title="Engleză" class="nav-link" href="contact_en.html">
+              <a title="English" class="nav-link" href="cv_en.html">
                 <button type="button" class="btn" data-bs-toggle="popover">
                 <img src="img/en.png" style="height: 20px; width: 20px;">
                 </button>
@@ -65,40 +65,54 @@
     </nav>
     <div class="container">
       <div class="row">
-        <div class="text col-md-6" style="padding: 2% 0 2% 0;">
-          <p style="font-size: 20px; font-family:Verdana;">
-            Adresă: Timișoara, România<br>
-            Telefon: 0732619973 <br>
-            Email: daniel.dandu@student.upt.ro <br>
+        <div class="text col-md-6" style="text-align: left; padding-left: 5%;">
+          <p style="font-size: 20px; font-family:Verdana; margin: 13% 0 2% 0;"><b>Education</b></p>
+          <p style="font-size: 18px; font-family:Verdana; margin-bottom: 0.5%;">
+            - <a id="link" href="https://www.etc.upt.ro/" target="_blank">Faculty of Electronics, Telecommunications and Information Technologies</a>
           </p>
-          <p style="font-size: 16px; font-family:Verdana;">Scanează codul QR pentru datele de contact:</p>
-            <img src="img/qrcode.png">
-          
-          
+          <p style="font-size: 16px; font-family:Verdana;">
+            &nbsp&nbsp <a id="link" href="https://www.upt.ro/" target="_blank">Polytechnic University of Timișoara</a>- Timișoara, România<br>
+            &nbsp&nbsp 09/2019 - On going
+          </p>
+          <p style="font-size: 18px; font-family:Verdana; margin-bottom: 0.5%;">
+            - Biology-Chemistry
+          </p>
+          <p style="font-size: 16px; font-family:Verdana;">
+            &nbsp&nbsp <a id="link" href="https://cniuliahasdeu.ro/" target="_blank">High School Iulia Hasdeu</a>- Lugoj, România<br>
+            &nbsp&nbsp 09/2015 - 05/2019
+          </p>
+          <p style="font-size: 20px; font-family:Verdana; margin-bottom: 2%;"><b>Work experience</b></p>
+          <p style="font-size: 18px; font-family:Verdana; margin-bottom: 0.5%;"> - Waiter</p>
+          <p style="font-size: 16px; font-family:Verdana;">
+            &nbsp&nbsp Restaurant Leto, Novum by the Sea - Olimp, România<br>
+            &nbsp&nbsp 06/2021 - 09/2021
+          </p>
         </div>
-        <div class="col-md-6 text-center" style="padding: 2% 0 2% 0; min-width: none;">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2784.1925476928313!2d21.224111515862404!3d45.747285679105346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47455d8303f55439%3A0xbe8d0248f81cb2a9!2sFacultatea%20de%20Electronic%C4%83%2C%20Telecomunica%C8%9Bii%20%C8%99i%20Tehnologii%20Informa%C8%9Bionale!5e0!3m2!1sro!2sro!4v1671156551262!5m2!1sro!2sro" width="520" height="470" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-        </div>
-      </div>
-      <div class="row">
-        <div class="text col-md-12">
-          <form action="" method="">
-            <label for="prenume">Prenume</label>
-            <input type="text" id="" name="prenume"><br>
-            <label for="nume">Nume</label>
-            <input type="text" name="nume"><br>
-            <label for="email">Email</label>
-            <input type="email" name="email"><br>
-            <label for="telefon">Telefon</label>
-            <input type="number" name="telefon"><br>
-          </form>
+        <div class="text col-md-6" style="text-align: left; padding-left: 10%;">
+          <p style="font-size: 20px; font-family:Verdana; margin: 13% 0 2% 0%;"><b>Skills</b></p>
+          <p style="font-size: 16px; font-family:Verdana; margin-bottom: 3%;">
+             - Teamwork <br>
+             - Communication <br>
+             - Attention to details <br>
+          </p>
+          <p style="font-size: 20px; font-family:Verdana; margin-bottom: 2%;"><b>Tehnical Skills</b></p>
+          <p style="font-size: 16px; font-family:Verdana;">
+              - Python <br>
+              - C <br>
+              - HTML <br>
+              - CSS <br>
+          </p>
+          <p style="font-size: 20px; font-family:Verdana; margin-bottom: 2%;"><b>Languages</b></p>
+          <p style="font-size: 16px; font-family:Verdana;">
+              - Romanian <br>
+              - English <br>
+          </p>
         </div>
       </div>
     </div>
     <footer class="footer py-3 border-top">
       <div class="row">
-        <div class="copy-mobile col-md-6" style="padding-left: 2%;">© 2022 Copyright Daniel Dandu</div>
+        <div class="copy-mobile col-md-6">© 2022 Copyright Daniel Dandu</div>
         <div class="icons-mobile col-md-6">
           <a href="mailto: danidandu19@gmail.com" target="_blank">
             <i title="Send an email" class="fa fa-envelope-o fa-2x" aria-hidden="true"></i>
