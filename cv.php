@@ -18,9 +18,59 @@
 
     <div class="container">
       <div class="row">
-        <div class="table col-md-6" style="text-align: center; padding-left: 5%;">
+        <div class="col-md-6" style="text-align: left; padding-left: 5%;">
           <h3 style="text-align: left;">Educație</h3>
-          <table>
+          <form action="<?=$_SERVER['PHP_SELF'];?>" method="POST">
+            <div class="mb-3">
+              <label for="facultatea" class="form-label">Facultatea:*</label>
+              <input type="text" name="facultatea" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="institutia" class="form-label">Instituția:*</label>
+              <input type="text" name="institutia" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="oras" class="form-label">Oraș:</label>
+              <input type="text" name="oras" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="diploma_obtinuta" class="form-label">Diploma obținută:*</label>
+              <input type="text" name="diploma_obtinuta" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="anul_inceperii" class="form-label">Anul inceperii:*</label>
+              <input type="datetime" name="anul_inceperii" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="anul_absolvirii" class="form-label">Anul absolvirii:*</label>
+              <input type="datetime" name="anul_absolvirii" class="form-control" required>
+            </div>
+            <button type="submit" value="Educație înregistrată" name="salveaza_info" class="btn btn-default">Înregistrează</button>
+          </form>
+
+          <?php
+            if (@$_POST['salveaza_info'] == 'Educație înregistrată') {
+              $facultatea = $_POST['facultatea'];
+              $institutia = $_POST['institutia'];
+              $oras = $_POST['oras'];
+              $diplomaObtinuta = $_POST['diploma_obtinuta'];
+              $anulInceperii = $_POST['anul_inceperii'];
+              $anulAbsovirii = $_POST['anul_absolvirii'];
+
+              
+              $sqlInsert = "INSERT INTO educatie (facultatea, institutia, oras, diploma_obtinuta, anul_inceperii, anul_absolvirii)
+                            VALUES ('$facultatea', '$institutia', '$oras', '$diplomaObtinuta', '$anulInceperii', '$anulAbsovirii');";
+              // echo "Instructiune inserare: ".$sqlInsert;
+              if(!mysqli_query($conn, $sqlInsert)) {
+              echo "<br>Nu a functionat"; echo mysqli_error ( $conn );
+              }
+            }
+          ?>
+
+        </div>
+        <div class="col-md-6" style="text-align: center; padding: 5% 0 0 2%">
+
+          <table style="text-align: center;">
             <tr>
               <th>Facultatea</th>
               <th>Instituția</th>
@@ -30,33 +80,7 @@
               <th>Anul absolvirii</th>
             </tr>
 
-          <?php 
-            // $listaEducatie = [
-            //   [
-            //     'facultatea' => 'ETcTi',
-            //     'institutia' => 'UPT',
-            //     'oras' => 'Timișoara',
-            //     'diploma_obtinuta' => 'Inginer',
-            //     'anul_inceperii' => 2019,
-            //     'anul_absolvirii' => 2023
-            //   ],
-            //   [
-            //     'facultatea' => 'ETcTi',
-            //     'institutia' => 'UPT',
-            //     'oras' => 'Timișoara',
-            //     'diploma_obtinuta' => 'Master',
-            //     'anul_inceperii' => 2023,
-            //     'anul_absolvirii' => 'prezent'
-            //   ]
-            // ];
-            
-            // foreach ($listaEducatie as $inregistrareEducatie) {
-            //   echo '<tr>';
-            //   foreach ($inregistrareEducatie as $element) {
-            //     echo '<td>'.$element.'</td>';
-            //   }
-            //   echo '<tr>';
-            // }
+          <?php
             
             $sql = "SELECT * FROM educatie";
             $result = mysqli_query($conn, $sql);
@@ -77,49 +101,6 @@
             echo '</table>';
 
           ?>
-
-
-          <!-- <p style="font-size: 20px; font-family:Verdana; margin: 13% 0 2% 0;"><b>Educație</b></p>
-          <p style="font-size: 18px; font-family:Verdana; margin-bottom: 0.5%;">
-            - <a id="link" href="https://www.etc.upt.ro/" target="_blank">Facultatea de Electronică, Telecomunicații și Tehnologii Informaționale</a>
-          </p>
-          <p style="font-size: 16px; font-family:Verdana;">
-            &nbsp&nbsp <a id="link" href="https://www.upt.ro/" target="_blank">Universitatea Politehnica Timișoara</a>- Timișoara, România<br>
-            &nbsp&nbsp 09/2019 - Prezent
-          </p>
-          <p style="font-size: 18px; font-family:Verdana; margin-bottom: 0.5%;">
-            - Biologie-Chimie
-          </p>
-          <p style="font-size: 16px; font-family:Verdana;">
-            &nbsp&nbsp <a id="link" href="https://cniuliahasdeu.ro/" target="_blank">Liceul Iulia Hasdeu</a>- Lugoj, România<br>
-            &nbsp&nbsp 09/2015 - 05/2019
-          </p>
-          <p style="font-size: 20px; font-family:Verdana; margin-bottom: 2%;"><b>Experiență Profesională</b></p>
-          <p style="font-size: 18px; font-family:Verdana; margin-bottom: 0.5%;"> - Ospătar</p>
-          <p style="font-size: 16px; font-family:Verdana;">
-            &nbsp&nbsp Restaurant Leto, Novum by the Sea - Olimp, România<br>
-            &nbsp&nbsp 06/2021 - 09/2021
-          </p> -->
-        </div>
-        <div class="text col-md-6" style="text-align: left; padding-left: 10%;">
-          <!-- <p style="font-size: 20px; font-family:Verdana; margin: 13% 0 2% 0%;"><b>Aptitudini</b></p>
-          <p style="font-size: 16px; font-family:Verdana; margin-bottom: 3%;">
-             - Muncă în echipă <br>
-             - Comunicare <br>
-             - Atenție la detalii <br>
-          </p>
-          <p style="font-size: 20px; font-family:Verdana; margin-bottom: 2%;"><b>Aptitudini Tehnice</b></p>
-          <p style="font-size: 16px; font-family:Verdana;">
-              - Python <br>
-              - C <br>
-              - HTML <br>
-              - CSS <br>
-          </p>
-          <p style="font-size: 20px; font-family:Verdana; margin-bottom: 2%;"><b>Limbi Cunoscute</b></p>
-          <p style="font-size: 16px; font-family:Verdana;">
-              - Română <br>
-              - Engleză <br>
-          </p> -->
         </div>
       </div>
     </div>
