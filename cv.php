@@ -11,12 +11,15 @@
   </head>
   <body>
     
-    <?php include 'header.php'?>
+    <?php
+      include 'config.php';
+      include 'header.php';
+    ?>
 
     <div class="container">
       <div class="row">
-        <div class="table col-md-6" style="text-align: left; padding-left: 5%;">
-          <h3>Educație</h3>
+        <div class="table col-md-6" style="text-align: center; padding-left: 5%;">
+          <h3 style="text-align: left;">Educație</h3>
           <table>
             <tr>
               <th>Facultatea</th>
@@ -28,31 +31,47 @@
             </tr>
 
           <?php 
-            $listaEducatie = [
-              [
-                'facultatea' => 'ETcTi',
-                'institutia' => 'UPT',
-                'oras' => 'Timișoara',
-                'diploma_obtinuta' => 'Inginer',
-                'anul_inceperii' => 2019,
-                'anul_absolvirii' => 2023
-              ],
-              [
-                'facultatea' => 'ETcTi',
-                'institutia' => 'UPT',
-                'oras' => 'Timișoara',
-                'diploma_obtinuta' => 'Master',
-                'anul_inceperii' => 2023,
-                'anul_absolvirii' => 'prezent'
-              ]
-            ];
+            // $listaEducatie = [
+            //   [
+            //     'facultatea' => 'ETcTi',
+            //     'institutia' => 'UPT',
+            //     'oras' => 'Timișoara',
+            //     'diploma_obtinuta' => 'Inginer',
+            //     'anul_inceperii' => 2019,
+            //     'anul_absolvirii' => 2023
+            //   ],
+            //   [
+            //     'facultatea' => 'ETcTi',
+            //     'institutia' => 'UPT',
+            //     'oras' => 'Timișoara',
+            //     'diploma_obtinuta' => 'Master',
+            //     'anul_inceperii' => 2023,
+            //     'anul_absolvirii' => 'prezent'
+            //   ]
+            // ];
             
-            foreach ($listaEducatie as $inregistrareEducatie) {
+            // foreach ($listaEducatie as $inregistrareEducatie) {
+            //   echo '<tr>';
+            //   foreach ($inregistrareEducatie as $element) {
+            //     echo '<td>'.$element.'</td>';
+            //   }
+            //   echo '<tr>';
+            // }
+            
+            $sql = "SELECT * FROM educatie";
+            $result = mysqli_query($conn, $sql);
+            while($row = mysqli_fetch_assoc($result)) {
+              // print_r($row);
+              // echo "id: " . $row["id"]. " - Denumire: " .$row['diploma_obtinuta']. "<br>";
+
               echo '<tr>';
-              foreach ($inregistrareEducatie as $element) {
-                echo '<td>'.$element.'</td>';
-              }
-              echo '<tr>';
+              echo '<td>'.$row['facultatea'].'</td>';
+              echo '<td>'.$row['institutia'].'</td>';
+              echo '<td>'.$row['oras'].'</td>';
+              echo '<td>'.$row['diploma_obtinuta'].'</td>';
+              echo '<td>'.$row['anul_inceperii'].'</td>';
+              echo '<td>'.$row['anul_absolvirii'].'</td>';
+              echo '</tr>';
             }
 
             echo '</table>';
@@ -60,7 +79,7 @@
           ?>
 
 
-          <p style="font-size: 20px; font-family:Verdana; margin: 13% 0 2% 0;"><b>Educație</b></p>
+          <!-- <p style="font-size: 20px; font-family:Verdana; margin: 13% 0 2% 0;"><b>Educație</b></p>
           <p style="font-size: 18px; font-family:Verdana; margin-bottom: 0.5%;">
             - <a id="link" href="https://www.etc.upt.ro/" target="_blank">Facultatea de Electronică, Telecomunicații și Tehnologii Informaționale</a>
           </p>
@@ -80,7 +99,7 @@
           <p style="font-size: 16px; font-family:Verdana;">
             &nbsp&nbsp Restaurant Leto, Novum by the Sea - Olimp, România<br>
             &nbsp&nbsp 06/2021 - 09/2021
-          </p>
+          </p> -->
         </div>
         <div class="text col-md-6" style="text-align: left; padding-left: 10%;">
           <!-- <p style="font-size: 20px; font-family:Verdana; margin: 13% 0 2% 0%;"><b>Aptitudini</b></p>
