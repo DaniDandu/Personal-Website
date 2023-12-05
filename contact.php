@@ -50,7 +50,7 @@
 
       // UPDATE - al doilea pas: actualizam informatiile in DB
       if (@$_POST['actualizeaza_info'] == 'Actualizeaza') {
-        echo 'S-a apasat pe butonul de actualizare';
+        // echo 'S-a apasat pe butonul de actualizare';
         $id = $_POST['id'];
         $nume = $_POST['nume'];
         $email = $_POST['email'];
@@ -59,7 +59,7 @@
         $sqlUpdate = "UPDATE comentarii SET
                         nume = '$nume',
                         email = '$email',
-                        comentariu = '$comentariu',
+                        comentariu = '$comentariu'
                         WHERE id='$id'";
         
         $result = mysqli_query($conn, $sqlUpdate) or die(mysql_error());
