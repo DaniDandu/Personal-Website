@@ -19,7 +19,7 @@
       // UPDATE - primul pas: conectare la DB, tabela educatie si luam inregistrarea/randul cu id-ul transmis prin $_GET
       
       if (!empty($_GET['edit_id'])) {
-        echo "A fost apasat pe editare pentru inregistrarea cu id-ul ".$_GET['edit_id'];
+        // echo "A fost apasat pe editare pentru inregistrarea cu id-ul ".$_GET['edit_id'];
 
         $updateId = $_GET['edit_id'];
         $sqlReadOnUpdate = "SELECT * FROM educatie WHERE id='$updateId'";
@@ -53,7 +53,7 @@
                         diploma_obtinuta = '$diplomaObtinuta',
                         anul_inceperii = '$anulInceperii',
                         anul_absolvirii = '$anulAbsovirii'
-                      WHERE id='$id'";
+                        WHERE id='$id'";
         
         $result = mysqli_query($conn, $sqlUpdate) or die(mysql_error());
       }
