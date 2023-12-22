@@ -15,7 +15,7 @@ $(document).ready(function(){
       opener: function(openerElement) {
 
         return openerElement.is('img') ? openerElement : openerElement.find('img');
-  }
-}
+      }
+    }
   })
 })
