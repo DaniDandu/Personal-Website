@@ -33,7 +33,8 @@
       }
 
       // UPDATE - primul pas: conectare la DB, tabela comentarii si luam inregistrarea/randul cu id-ul transmis prin $_GET
-      
+      $displayUpdateButton2 = false;
+
       if (!empty($_GET['edit_id'])) {
 
         // echo "A fost apasat pe editare pentru inregistrarea cu id-ul ".$_GET['edit_id'];
@@ -47,6 +48,7 @@
         $nume = $row['nume'];
         $email = $row['email'];
         $comentariu = $row['comentariu'];
+        $displayUpdateButton2 = true;
       }
 
       // UPDATE - al doilea pas: actualizam informatiile in DB
@@ -105,12 +107,15 @@
             <div class="form-group">        
               <div class="col-sm-offset-2 col-sm-10">
                 <br>
+                <?php if (!$displayUpdateButton2): ?>
                 <input type="submit" value="Comenteaza" name="postare_comentariu" 
-                  style="align-items: center; background-color: #fee6e3; border: 1px solid #111; border-radius: 8px;"
-                  <?php if(!empty($_GET['edit_id'])) echo 'style="visibility: hidden"';?>>
+                  style="align-items: center; background-color: #fee6e3; border: 1px solid #111; border-radius: 8px;">
+                <?php endif; ?>
+
+                <?php if ($displayUpdateButton2): ?>
                 <input type="submit" value="Actualizeaza" name="actualizeaza_info"
                   style="align-items: center; background-color: #fee6e3; border: 1px solid #111; border-radius: 8px;">
-                
+                <?php endif; ?>
               </div>
             </div>
           </form>
