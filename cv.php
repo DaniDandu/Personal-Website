@@ -57,6 +57,7 @@
                         WHERE id='$id'";
         
         $result = mysqli_query($conn, $sqlUpdate) or die(mysql_error());
+        echo "<meta http-equiv='refresh' content='0'>";
       }
 
       // CREATE
@@ -70,7 +71,8 @@
         
         $sqlInsert = "INSERT INTO educatie (facultatea, institutia, diploma_obtinuta, anul_inceperii, anul_absolvirii)
                       VALUES ('$facultatea', '$institutia', '$diplomaObtinuta', '$anulInceperii', '$anulAbsovirii');";
-        // echo "Instructiune inserare: ".$sqlInsert;
+                      
+        echo "<meta http-equiv='refresh' content='0'>";
         if(!mysqli_query($conn, $sqlInsert)) {
         echo "<br>Nu a functionat"; echo mysqli_error ( $conn );
         }
@@ -129,6 +131,7 @@
                       WHERE id='$id'";
       
       $result = mysqli_query($conn, $sqlUpdate) or die(mysql_error());
+      echo "<meta http-equiv='refresh' content='0'>";
     }
 
     // CREATE
@@ -139,9 +142,9 @@
       $anulStart = $_POST['anul_start'];
       $anulIncheierii = $_POST['anul_incheierii'];
 
-      
       $sqlInsert = "INSERT INTO experienta_profesionala (firma, pozitia_ocupata, oras, anul_start, anul_incheierii)
                     VALUES ('$firma', '$pozitia_ocupata', '$oras', '$anulStart', '$anulIncheierii');";
+      echo "<meta http-equiv='refresh' content='0'>";
       if(!mysqli_query($conn, $sqlInsert)) {
       echo "<br>Nu a functionat"; echo mysqli_error ( $conn );
       }

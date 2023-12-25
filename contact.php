@@ -26,7 +26,8 @@
         
         $sqlInsert = "INSERT INTO comentarii (nume, email, comentariu)
                       VALUES ('$nume', '$email', '$comentariu');";
-        // echo "Instructiune inserare: ".$sqlInsert;
+                      
+        echo "<meta http-equiv='refresh' content='0'>";
         if(!mysqli_query($conn, $sqlInsert)) {
         echo "<br>Nu a functionat"; echo mysqli_error ( $conn );
         }
@@ -66,6 +67,7 @@
                         WHERE id='$id'";
         
         $result = mysqli_query($conn, $sqlUpdate) or die(mysql_error());
+        echo "<meta http-equiv='refresh' content='0'>";
       }
 
       // DELETE
